@@ -1,0 +1,14 @@
+D:\niho\NewCall\bin\Debug\net7.0\NewCall.exe
+D:\niho\NewCall\bin\Debug\net7.0\NewCall.deps.json
+D:\niho\NewCall\bin\Debug\net7.0\NewCall.runtimeconfig.json
+D:\niho\NewCall\bin\Debug\net7.0\NewCall.dll
+D:\niho\NewCall\bin\Debug\net7.0\NewCall.pdb
+D:\niho\NewCall\obj\Debug\net7.0\NewCall.GeneratedMSBuildEditorConfig.editorconfig
+D:\niho\NewCall\obj\Debug\net7.0\NewCall.AssemblyInfoInputs.cache
+D:\niho\NewCall\obj\Debug\net7.0\NewCall.AssemblyInfo.cs
+D:\niho\NewCall\obj\Debug\net7.0\NewCall.csproj.CoreCompileInputs.cache
+D:\niho\NewCall\obj\Debug\net7.0\NewCall.dll
+D:\niho\NewCall\obj\Debug\net7.0\refint\NewCall.dll
+D:\niho\NewCall\obj\Debug\net7.0\NewCall.pdb
+D:\niho\NewCall\obj\Debug\net7.0\NewCall.genruntimeconfig.cache
+D:\niho\NewCall\obj\Debug\net7.0\ref\NewCall.dll
