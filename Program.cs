@@ -1,11 +1,11 @@
 ﻿﻿using System;
 using Login;
+using Menu;
 using System.Runtime.CompilerServices;
 class Precence
 {
     static void Main(string[] args)
     {
-        //Création de la liste des étudiants
 
         List<Student> students = new List<Student>(){
         };
@@ -32,48 +32,12 @@ class Precence
         ");
         Console.WriteLine("---------------------------------------------------------");
         Login.Controller.Login.Auth();
-        String? s;
-        //Afficher la liste des étudiants à chaque étudiant.
-        foreach (Student studentCurrent in students) {
-            do {
-                Console.WriteLine($"L'étudiant {studentCurrent.LastName} {studentCurrent.Firstname} est-il absent ou présent ? Tapez 'a' pour absent ou 'p' pour présent");
-
-                //Lire ce que l'utilisateur a tapé
-                s = Console.ReadLine();
-                switch (s)   {
-                    //Ajouter l'étudiant à la liste des absents
-                    case "a" or "A":
-                        absents.Add(studentCurrent);
-                        s = "ok";
-                        Console.WriteLine($"Absent");
-                        break;
-
-                    case "p" or "P":
-                        s = "ok";
-                        Console.WriteLine($"Présent");
-                        break;
-                    //Si c'est incorrect, afficher message d'erreur
-                    default:
-                        Console.WriteLine($"Erreur. Taper 'a' ou 'p'");
-                        break;
-                    }
-                } while (s != "ok");
-
-            }
-        Console.WriteLine("---------------------------------------------------------");
-        //Afficher la liste des absents
-        Console.WriteLine($"Liste des absents");
-        foreach (Student currentAbsents in absents) {
-            Console.WriteLine($"{currentAbsents.LastName}  {currentAbsents.Firstname}");
+         //Création de la liste des étudiants
+        bool showMenu = true;
+        while (showMenu)
+        {
+            showMenu = Menu.Controller.Code.MainMenu();
         }
-        do {
-            Console.WriteLine($"Appuyer sur Enter pour quitter");
-            s = Console.ReadLine();
-            switch (s)   {
-                default:
-                    break;
-            }
-        } while (s == null);
     }
 }
 
