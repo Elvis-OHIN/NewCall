@@ -18,6 +18,7 @@ namespace Menu.Controller
                     Students.Controller.Code.ListAbsents();
                     return true;
                 case "2":
+                    Students.Controller.Code.Call();
                     return true;
                 case "3":
                     return false;

@@ -38,49 +38,6 @@ class Precence
         {
             showMenu = Menu.Controller.Code.MainMenu();
         }
-
-        String? s;
-        //Afficher la liste des étudiants à chaque étudiant.
-        foreach (Student studentCurrent in students) {
-            do {
-                Console.WriteLine($"L'étudiant {studentCurrent.LastName} {studentCurrent.Firstname} est-il absent ou présent ? Tapez 'a' pour absent ou 'p' pour présent");
-
-                //Lire ce que l'utilisateur a tapé
-                s = Console.ReadLine();
-                switch (s)   {
-                    //Ajouter l'étudiant à la liste des absents
-                    case "a" or "A":
-                        absents.Add(studentCurrent);
-                        s = "ok";
-                        Console.WriteLine($"Absent");
-                        break;
-
-                    case "p" or "P":
-                        s = "ok";
-                        Console.WriteLine($"Présent");
-                        break;
-                    //Si c'est incorrect, afficher message d'erreur
-                    default:
-                        Console.WriteLine($"Erreur. Taper 'a' ou 'p'");
-                        break;
-                    }
-                } while (s != "ok");
-
-            }
-        Console.WriteLine("---------------------------------------------------------");
-        //Afficher la liste des absents
-        Console.WriteLine($"Liste des absents");
-        foreach (Student currentAbsents in absents) {
-            Console.WriteLine($"{currentAbsents.LastName}  {currentAbsents.Firstname}");
-        }
-        do {
-            Console.WriteLine($"Appuyer sur Enter pour quitter");
-            s = Console.ReadLine();
-            switch (s)   {
-                default:
-                    break;
-            }
-        } while (s == null);
     }
 }
 
