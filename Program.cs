@@ -1,11 +1,11 @@
 ﻿﻿using System;
 using Login;
+using Menu;
 using System.Runtime.CompilerServices;
 class Precence
 {
     static void Main(string[] args)
     {
-        //Création de la liste des étudiants
 
         List<Student> students = new List<Student>(){
         };
@@ -32,6 +32,13 @@ class Precence
         ");
         Console.WriteLine("---------------------------------------------------------");
         Login.Controller.Login.Auth();
+         //Création de la liste des étudiants
+        bool showMenu = true;
+        while (showMenu)
+        {
+            showMenu = Menu.Controller.Code.MainMenu();
+        }
+
         String? s;
         //Afficher la liste des étudiants à chaque étudiant.
         foreach (Student studentCurrent in students) {
