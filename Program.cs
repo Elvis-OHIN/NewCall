@@ -1,4 +1,6 @@
-﻿using System;
+﻿﻿using System;
+using Login;
+using System.Runtime.CompilerServices;
 class Precence
 {
     static void Main(string[] args)
@@ -29,6 +31,7 @@ class Precence
                                                     |_|
         ");
         Console.WriteLine("---------------------------------------------------------");
+        Login.Controller.Login.Auth();
         String? s;
         //Afficher la liste des étudiants à chaque étudiant.
         foreach (Student studentCurrent in students) {
