@@ -1,4 +1,5 @@
 ﻿﻿using System;
+using Calendar;
 using Login;
 using Menu;
 using System.Runtime.CompilerServices;
@@ -9,10 +10,12 @@ class Precence
     static void Main(string[] args)
     {
         Students.Controller.Code.Data();
+        Calendar.Controller.Code.Data();
+        Students.Controller.Code.Insert();
         Students.Controller.Code.DataA();
         Students.Controller.Code.Clear();
 
-        Console.WriteLine(@$"
+        Console.WriteLine(@$"();
         _____       _     _            _                         __
         / ____|     (_)   (_)          | |                       /_/
         | (___   __ _ _ ___ _  ___    __| | ___  ___   _ __  _ __ ___  ___  ___ _ __   ___ ___  ___
