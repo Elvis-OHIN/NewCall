@@ -3,30 +3,24 @@ using Calendar;
 using Login;
 using Menu;
 using System.Runtime.CompilerServices;
-using Students.Controller;
 
-class Precence
+class Program
 {
     static void Main(string[] args)
     {
-        Students.Controller.Code.Data();
-        Calendar.Controller.Code.Data();
-        Students.Controller.Code.Insert();
-        Students.Controller.Code.DataA();
-        Students.Controller.Code.Clear();
+        Database.Config.Database.EnsureTableExists();
 
-        Console.WriteLine(@$"();
-        _____       _     _            _                         __
-        / ____|     (_)   (_)          | |                       /_/
-        | (___   __ _ _ ___ _  ___    __| | ___  ___   _ __  _ __ ___  ___  ___ _ __   ___ ___  ___
-        \___ \ / _` | / __| |/ _ \  / _` |/ _ \/ __| | '_ \| '__/ _ \/ __|/ _ \ '_ \ / __/ _ \/ __|
-        ____) | (_| | \__ \ |  __/ | (_| |  __/\__ \ | |_) | | |  __/\__ \  __/ | | | (_|  __/\__ \
-        |_____/ \__,_|_|___/_|\___|  \__,_|\___||___/ | .__/|_|  \___||___/\___|_| |_|\___\___||___/
-                                                    | |
-                                                    |_|
+        Console.WriteLine(@$"
+        _   _                _____      _ _
+        | \ | |              / ____|    | | |
+        |  \| | _____      _| |     __ _| | |
+        | . ` |/ _ \ \ /\ / / |    / _` | | |
+        | |\  |  __/\ V  V /| |___| (_| | | |
+        |_| \_|\___| \_/\_/  \_____\__,_|_|_|
+
         ");
         Console.WriteLine("---------------------------------------------------------");
-        Login.Controller.Login.Auth();
+        Login.Controller.LoginController.ValidationLogin();
         bool showMenu = true;
         while (showMenu)
         {

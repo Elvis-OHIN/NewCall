@@ -3,9 +3,9 @@ using Students.Controller;
 
 namespace Login.Controller
 {
-    public class Login {
+    public class LoginController {
 
-        public static void Auth(){
+        public static void ValidationLogin(){
 
             // Afficher la liste des étudiants à chaque étudiant.
             string? identifiant;
@@ -19,7 +19,7 @@ namespace Login.Controller
                     Console.WriteLine("Mot de passe");
                     password = Console.ReadLine() ?? string.Empty;
 
-                    if(Students.Controller.Code.GetUserByName(identifiant,password)){
+                    if(Admin.Model.AdminModel.GetAdmin(identifiant,password)){
                         v = true;
                         Console.WriteLine($"Vous êtes connecté");
                     }else{
@@ -27,5 +27,6 @@ namespace Login.Controller
                     }
                 } while (v != true);
         }
+
     }
 }
