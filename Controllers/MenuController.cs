@@ -15,7 +15,7 @@ namespace Menu.Controller
             switch (Console.ReadLine())
             {
                 case "1":
-                    Students.Controller.Code.ListAbsents();
+                    Absent.Controller.AbsentController.DisplayAbsentList();
                     return true;
                 case "2":
                     Students.Controller.Code.Call();

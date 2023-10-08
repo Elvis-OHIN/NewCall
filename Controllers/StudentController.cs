@@ -18,75 +18,72 @@ namespace Students.Controller
             AppDomain.CurrentDomain.ProcessExit += (s, e) => CloseConnection();
         }
 
-        public static void ListAbsents()
-        {
-            Console.Clear();
-            List<Student> absents = new List<Student>();
-            Console.WriteLine($"Liste des absents");
-            GetA();
-            Console.Write("\r\nAppuyez sur Entrée pour retourner au menu principal");
-            Console.ReadLine();
-        }
-
         public static void Call()
         {
             Console.Clear();
             String? s;
-            String date;
-            List<Student> students = new List<Student>();
-            students.Add(new Student("CHABEAUDIE" , "Maxime"));
-            students.Add(new Student("FETTER" , "Léo"));
-            students.Add(new Student("MONTASTIER" , "Florian"));
-            students.Add(new Student("MARTIN" , "Jérémy"));
-            students.Add(new Student("OHIN" , "ELvis"));
-            date = ChoiceDay();
+            List<int> array = new List<int>();
+            DateTime date = ChoiceDay();
 
-            foreach (Student studentCurrent in students)
+            using (SQLiteDataReader students = Student.Model.StudentModel.GetAllStudent())
             {
-                do
+                while (students.Read())
                 {
-                    Console.WriteLine($"L'étudiant {studentCurrent.LastName} {studentCurrent.Firstname} est-il absent ou présent ? Tapez 'a' pour absent ou 'p' pour présent");
-                    s = Console.ReadLine();
-                    switch (s)
+                    do
                     {
-                        case "a":
-                        case "A":
-                            InsertA(studentCurrent.Firstname,studentCurrent.LastName,"FA");
-                            s = "ok";
-                            Console.WriteLine($"Absent");
-                            break;
-                        case "p":
-                        case "P":
-                            s = "ok";
-                            Console.WriteLine($"Présent");
-                            break;
-                        default:
-                            Console.WriteLine($"Erreur. Taper 'a' ou 'p'");
-                            break;
-                    }
-                } while (s != "ok");
+                        Console.WriteLine($"L'étudiant {students["firstname"]} {students["lastname"]} est-il absent ou présent ? Tapez 'a' pour absent ou 'p' pour présent");
+                        s = Console.ReadLine();
+                        switch (s)
+                        {
+                            case "a":
+                            case "A":
+                                s = "ok";
+                                array.Add(Convert.ToInt32(students["user_id"]));
+                                Console.WriteLine($"Absent");
+                                break;
+                            case "p":
+                            case "P":
+                                s = "ok";
+                                Console.WriteLine($"Présent");
+                                break;
+                            default:
+                                Console.WriteLine($"Erreur. Taper 'a' ou 'p'");
+                                break;
+                        }
+                    } while (s != "ok");
+
+                }
+                var studentInfo = new
+                {
+                    array
+                };
+                Absent.Model.AbsentModel.addAbsent(date, studentInfo);
             }
-            Calendar.Controller.Code.Insert(date,GetAbsentList());
-            ListAbsents();
-            Clear();
         }
-        public static string ChoiceDay()
+
+         public static DateTime ChoiceDay()
         {
             Console.Clear();
-            String? s;
-            bool verif;
+            string s;
+            bool validDate;
             do
+            {
+                Console.WriteLine($"Veuillez entrer une date pour l'appel (format JJ/MM/AAAA) :");
+                s = Console.ReadLine();
+                validDate = IsValidDate(s, out DateTime parsedDate);
+                if (validDate)
                 {
-                    Console.WriteLine($"Veuillez entrer une date pour l'appel (format JJ/MM/AAAA) :");
-                    s = Console.ReadLine();
-                    verif = VerifSaisie(s);
-                } while (verif != true);
+                    return parsedDate;
+                }
+            } while (!validDate);
 
-            return s;
+            // Ceci ne sera jamais atteint, mais c'est nécessaire pour satisfaire le compilateur.
+            return DateTime.MinValue;
         }
 
-        public static bool VerifSaisie(string date){
-            if (DateTime.TryParseExact(date, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime parsedDate))
+        public static bool IsValidDate(string date, out DateTime parsedDate)
+        {
+            if (DateTime.TryParseExact(date, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out parsedDate))
             {
                 return true;
             }
@@ -97,50 +94,8 @@ namespace Students.Controller
             }
         }
 
-        public static void Data()
-        {
-            string createTableQuery = @"CREATE TABLE IF NOT EXISTS [User] (
-                          [user_id] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-                          [firstname] NVARCHAR(50) NOT NULL,
-                          [lastname] NVARCHAR(50) NOT NULL,
-                          [identifiant] NVARCHAR(255) NULL,
-                          [password] NVARCHAR(255) NULL,
-                          [role] NVARCHAR(50) NULL,
-                          [statut] NVARCHAR(50) NULL
-                          )";
-            using var cmd = new SQLiteCommand(createTableQuery, connection);
-            cmd.ExecuteNonQuery();
-        }
-        public static void DataA()
-        {
-            string createTableQuery = @"CREATE TABLE IF NOT EXISTS [Absent] (
-                          [id] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-                          [firstname] NVARCHAR(50) NOT NULL,
-                          [lastname] NVARCHAR(50) NOT NULL,
-                          [statut] NVARCHAR(50) NULL
-                          )";
-            using var cmd = new SQLiteCommand(createTableQuery, connection);
-            cmd.ExecuteNonQuery();
-        }
 
-        public static void Insert()
-        {
-           // string insertQuery = "INSERT INTO User (firstname,lastname,identifiant,password,role) VALUES ('admin','admin','admin','password','admin')";
-            //using var cmd = new SQLiteCommand(insertQuery, connection);
-            //cmd.ExecuteNonQuery();
-            List<Student> students = new List<Student>();
-            students.Add(new Student("CHABEAUDIE" , "Maxime"));
-            students.Add(new Student("FETTER" , "Léo"));
-            students.Add(new Student("MONTASTIER" , "Florian"));
-            students.Add(new Student("MARTIN" , "Jérémy"));
-            students.Add(new Student("OHIN" , "ELvis"));
 
-            foreach (Student studentCurrent in students)  {
-                string insertQuery = $"INSERT INTO User (firstname,lastname,role) VALUES ('{studentCurrent.LastName}','{studentCurrent.Firstname}','student')";
-                using var cmd = new SQLiteCommand(insertQuery, connection);
-                cmd.ExecuteNonQuery();
-            }
-        }
 
         public static void InsertA(string firstname,string lastname,string statut)
         {
