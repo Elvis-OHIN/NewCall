@@ -2,6 +2,8 @@ using System.Data.SQLite;
 using Database.Config;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Spectre.Console;
+
 
 namespace Absent.Model
 {
@@ -55,45 +57,54 @@ namespace Absent.Model
             return string.Join(",", ids);
         }
 
-        public static void InsertA(string firstname,string lastname,string statut)
-        {
-            string insertQuery = $"INSERT INTO Absent (firstname,lastname,statut) VALUES ('{firstname}','{lastname}','{statut}')";
-            using var cmd = new SQLiteCommand(insertQuery, connection);
-            cmd.ExecuteNonQuery();
-        }
 
-        public static void FetchAbsentsByDate(DateOnly date)
+        public static void FetchAbsentsByDate(DateTime date)
         {
             SQLiteConnection connection = Database.Config.Database.Connection;
+            string selectQuery = $"SELECT * FROM Absent WHERE date = '{date.Date}'";
 
-            string selectQuery = $"SELECT * FROM Absent WHERE date = '{date}'";
-            Console.WriteLine(date);
             using (var cmd = new SQLiteCommand(selectQuery, connection))
-
+            {
                 using (SQLiteDataReader reader = cmd.ExecuteReader())
                 {
+                    var table = new Table();
+                    table.AddColumn(new TableColumn("Nom").Centered());
+                    table.AddColumn(new TableColumn("Prénom").Centered());
+                    table.AddColumn(new TableColumn("Statut").Centered());
+                    table.Border(TableBorder.Rounded);
+
                     while (reader.Read())
                     {
                         // Supprimez les crochets et séparez les identifiants
-                        string listWithoutBrackets = reader["list"].ToString().Trim('[', ']');
+                        var list = "[]";
+                        list = (string)reader["list"];
+                        string listWithoutBrackets = list.ToString().Trim('[', ']');
                         string[] ids = listWithoutBrackets.Split(',');
 
                         foreach (string idString in ids)
                         {
-                            if (int.TryParse(idString.Trim(), out int id))  // Utilisez Trim() pour éliminer tout espace éventuel
+                            if (int.TryParse(idString.Trim(), out int id))
                             {
-                                Student.Model.StudentModel.GetStudentByID(id);
+                                SQLiteDataReader student = Student.Model.StudentModel.GetStudentByID(id);
+                                if (student.HasRows){
+                                    while (student.Read()) {
+                                        string lastname = (string)student["lastname"];
+                                        string firstname = (string)student["firstname"];
+                                        string statut  = (string)student["statut"];
+                                        table.AddRow(lastname,firstname,statut);
+                                    }
+                                }
                             }
                         }
                     }
+                    AnsiConsole.Write(table);
                 }
+            }
         }
-
-
-        public static void addAbsent(DateOnly date , object studentData)
+        public static void addAbsent(DateTime date , object studentData)
         {
             string jsonData = JsonConvert.SerializeObject(studentData);
-            string insertQuery = $"INSERT INTO Absent (date,list) VALUES ('{date}','{jsonData}')";
+            string insertQuery = $"INSERT INTO Absent (date,list) VALUES ('{date.Date}','{jsonData}')";
             using var cmd = new SQLiteCommand(insertQuery, connection);
             cmd.ExecuteNonQuery();
         }
@@ -122,13 +133,18 @@ namespace Absent.Model
                 {
                     while (reader.Read())
                     {
-                        string jsonList = (string)reader["list"];
-                        JObject jsonObject = JObject.Parse(jsonList);
-                        JArray jsonArray = (JArray)jsonObject["array"];
-                        foreach (int id in jsonArray)
-                        {   if(id == user_id)
+                        var list = "[]";
+                        list = (string)reader["list"];
+                        string listWithoutBrackets = list.ToString().Trim('[', ']');
+                        string[] ids = listWithoutBrackets.Split(',');
+                        foreach (string idString in ids)
+                        {
+                            if (int.TryParse(idString.Trim(), out int id))
                             {
-                                total++;
+                                if(id == user_id)
+                                {
+                                    total++;
+                                }
                             }
                         }
                     }

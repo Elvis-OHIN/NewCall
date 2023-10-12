@@ -23,22 +23,16 @@ namespace Student.Model
             }
         }
 
-        public static void GetStudentByID(int student_id)
+        public static SQLiteDataReader GetStudentByID(int student_id)
         {
             string selectQuery = "SELECT * FROM Students WHERE user_id = @student_id";
-
-            using (var cmd = new SQLiteCommand(selectQuery, connection))
-            {
-                cmd.Parameters.AddWithValue("@student_id", student_id);
-                using (SQLiteDataReader reader = cmd.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        Console.WriteLine($"Prénom: {reader["firstname"]}, Nom de famille: {reader["lastname"]}");
-                    }
-                }
-            }
+            var cmd = new SQLiteCommand(selectQuery, connection);
+            cmd.Parameters.AddWithValue("@student_id", student_id);
+            var reader = cmd.ExecuteReader();
+            return reader;
         }
+
+
         public static SQLiteDataReader GetAllStudent()
         {
             string selectQuery = "SELECT * FROM Students";

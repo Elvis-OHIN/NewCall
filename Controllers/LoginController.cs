@@ -1,32 +1,32 @@
+using Spectre.Console;
 using Students.Controller;
-
 
 namespace Login.Controller
 {
-    public class LoginController {
+    public class LoginController
+    {
+        public static void ValidationLogin()
+        {
+            bool isAuthenticated = false;
 
-        public static void ValidationLogin(){
+            while (!isAuthenticated)
+            {
+                string identifiant = AnsiConsole.Prompt(
+                    new TextPrompt<string>("Entrer votre [green]Identifiant[/]?"));
+                string password = AnsiConsole.Prompt(
+                    new TextPrompt<string>("Entrer votre [green]Mot de passe[/]?")
+                        .Secret());
 
-            // Afficher la liste des étudiants à chaque étudiant.
-            string? identifiant;
-            string? password;
-            bool? v = false;
-            do
+                if (Admin.Model.AdminModel.GetAdmin(identifiant, password))
                 {
-                    Console.WriteLine("Identifiant");
-                    identifiant = Console.ReadLine() ?? string.Empty;
-
-                    Console.WriteLine("Mot de passe");
-                    password = Console.ReadLine() ?? string.Empty;
-
-                    if(Admin.Model.AdminModel.GetAdmin(identifiant,password)){
-                        v = true;
-                        Console.WriteLine($"Vous êtes connecté");
-                    }else{
-                        Console.WriteLine($"Mot de passe ou Identifiant invalide");
-                    }
-                } while (v != true);
+                    isAuthenticated = true;
+                    AnsiConsole.MarkupLine("[green]Vous êtes connecté[/]");
+                }
+                else
+                {
+                    AnsiConsole.MarkupLine("[red]Mot de passe ou Identifiant invalide[/]");
+                }
+            }
         }
-
     }
 }
