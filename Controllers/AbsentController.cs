@@ -4,56 +4,78 @@ namespace Absent.Controller
 {
     public class AbsentController
     {
-        // Affiche la liste des absents à l'écran.
+        // Display the list of absentees on the screen.
         public static void DisplayAbsentList()
         {
-            try
-            {
-                DateTime date = ChoiceDay();
+
+
+                DateOnly date = ChooseDay();
                 Console.Clear();
                 Console.WriteLine("Liste des absents");
 
-                // Récupère et affiche la liste des absents depuis le modèle.
+                // Retrieve and display the list of absentees from the model.
                 Model.AbsentModel.FetchAbsentsByDate(date);
 
-                Console.Write("\r\nAppuyez sur Entrée pour retourner au menu principal");
+                Console.Write("\r\nPress Enter to return to the main menu");
                 Console.ReadLine();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Une erreur est survenue : {ex.Message}");
-            }
-        }
 
-        public static DateTime ChoiceDay()
+        }
+        public static DateOnly ChooseDay()
         {
             Console.Clear();
-            string s;
-            bool validDate;
+            string inputDate;
+            bool isValidDate;
+            DateOnly parsedDate;
+
             do
             {
-                Console.WriteLine($"Veuillez entrer une date pour l'appel (format JJ/MM/AAAA) :");
-                s = Console.ReadLine();
-                validDate = IsValidDate(s, out DateTime parsedDate);
-                if (validDate)
+                Console.WriteLine("Please enter a date for the roll call (format DD/MM/YYYY):");
+                inputDate = Console.ReadLine();
+                isValidDate = TryParseDate(inputDate, out parsedDate);
+
+                if (isValidDate)
                 {
                     return parsedDate;
                 }
-            } while (!validDate);
+            } while (!isValidDate);
 
-            return DateTime.MinValue;
+            return DateOnly.MinValue;
         }
 
-        public static bool IsValidDate(string date, out DateTime parsedDate)
+
+        public static bool TryParseDate(string date, out DateOnly parsedDate)
         {
-            if (DateTime.TryParseExact(date, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out parsedDate))
+            if (DateOnly.TryParseExact(date, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out parsedDate))
             {
                 return true;
             }
             else
             {
-                Console.WriteLine("Date non valide. Assurez-vous d'utiliser le format JJ/MM/AAAA");
+                Console.WriteLine("Invalid date. Please ensure you use the format DD/MM/YYYY");
                 return false;
+            }
+        }
+
+        public static void DisplayAbsentListStats()
+        {
+            try
+            {
+                Console.Clear();
+                Console.WriteLine("Absentee statistics");
+
+                System.Data.SQLite.SQLiteDataReader students = Student.Model.StudentModel.GetAllStudent();
+                while (students.Read())
+                {
+                    int totalAbsences = Model.AbsentModel.GetAbsentTotal((int)Convert.ToInt64(students["user_id"]));
+                    Console.WriteLine($"The student {students["firstname"]} {students["lastname"]} has been absent {totalAbsences} times");
+                }
+
+                Console.Write("\r\nPress Enter to return to the main menu");
+                Console.ReadLine();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
     }

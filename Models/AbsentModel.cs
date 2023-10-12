@@ -41,7 +41,7 @@ namespace Absent.Model
                 }
             }
         }
-        public static string GetAbsentListByDate(DateTime date)
+        public static string GetAbsentListByDate(DateOnly date)
         {
             List<int> ids = new List<int>();
             string selectQuery = "SELECT * FROM Absent WHERE date = @date";
@@ -62,31 +62,35 @@ namespace Absent.Model
             cmd.ExecuteNonQuery();
         }
 
-        public static void FetchAbsentsByDate(DateTime date)
+        public static void FetchAbsentsByDate(DateOnly date)
         {
-            // Assuming the connection is static within the Database class
             SQLiteConnection connection = Database.Config.Database.Connection;
 
-            string selectQuery = "SELECT * FROM Absent";
+            string selectQuery = $"SELECT * FROM Absent WHERE date = '{date}'";
+            Console.WriteLine(date);
             using (var cmd = new SQLiteCommand(selectQuery, connection))
-            {
+
                 using (SQLiteDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        string jsonList = (string)reader["list"];
-                        JObject jsonObject = JObject.Parse(jsonList);
-                        JArray jsonArray = (JArray)jsonObject["array"];
-                        foreach (int id in jsonArray)
+                        // Supprimez les crochets et séparez les identifiants
+                        string listWithoutBrackets = reader["list"].ToString().Trim('[', ']');
+                        string[] ids = listWithoutBrackets.Split(',');
+
+                        foreach (string idString in ids)
                         {
-                            Student.Model.StudentModel.GetStudentByID(id);
+                            if (int.TryParse(idString.Trim(), out int id))  // Utilisez Trim() pour éliminer tout espace éventuel
+                            {
+                                Student.Model.StudentModel.GetStudentByID(id);
+                            }
                         }
                     }
                 }
-            }
         }
 
-        public static void addAbsent(DateTime date , object studentData)
+
+        public static void addAbsent(DateOnly date , object studentData)
         {
             string jsonData = JsonConvert.SerializeObject(studentData);
             string insertQuery = $"INSERT INTO Absent (date,list) VALUES ('{date}','{jsonData}')";
@@ -104,6 +108,33 @@ namespace Absent.Model
                 ids.Add(Convert.ToInt32(reader["id"]));
             }
             return string.Join(",", ids);
+        }
+
+        public static int GetAbsentTotal(int user_id)
+        {
+            int total = 0;
+            SQLiteConnection connection = Database.Config.Database.Connection;
+
+            string selectQuery = "SELECT * FROM Absent";
+            using (var cmd = new SQLiteCommand(selectQuery, connection))
+            {
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string jsonList = (string)reader["list"];
+                        JObject jsonObject = JObject.Parse(jsonList);
+                        JArray jsonArray = (JArray)jsonObject["array"];
+                        foreach (int id in jsonArray)
+                        {   if(id == user_id)
+                            {
+                                total++;
+                            }
+                        }
+                    }
+                }
+            }
+            return total;
         }
     }
 }

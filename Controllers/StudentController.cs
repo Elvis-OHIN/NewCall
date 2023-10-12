@@ -1,15 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Security;
-using Calendar.Controller;
 
 namespace Students.Controller
 {
     public class Code
     {
         private static readonly string connectionString = "Data Source=NewCall.db;Version=3;";
-        private static SQLiteConnection connection;
+        private static readonly SQLiteConnection connection;
 
         static Code()
         {
@@ -21,69 +19,58 @@ namespace Students.Controller
         public static void Call()
         {
             Console.Clear();
-            String? s;
-            List<int> array = new List<int>();
-            DateTime date = ChoiceDay();
+            List<int> absentStudents = new List<int>();
+            DateOnly date = ChooseDay();
 
             using (SQLiteDataReader students = Student.Model.StudentModel.GetAllStudent())
             {
                 while (students.Read())
                 {
+                    char response;
                     do
                     {
-                        Console.WriteLine($"L'étudiant {students["firstname"]} {students["lastname"]} est-il absent ou présent ? Tapez 'a' pour absent ou 'p' pour présent");
-                        s = Console.ReadLine();
-                        switch (s)
-                        {
-                            case "a":
-                            case "A":
-                                s = "ok";
-                                array.Add(Convert.ToInt32(students["user_id"]));
-                                Console.WriteLine($"Absent");
-                                break;
-                            case "p":
-                            case "P":
-                                s = "ok";
-                                Console.WriteLine($"Présent");
-                                break;
-                            default:
-                                Console.WriteLine($"Erreur. Taper 'a' ou 'p'");
-                                break;
-                        }
-                    } while (s != "ok");
+                        Console.WriteLine($"L'étudiant {students["firstname"]} {students["lastname"]} est-il absent ou présent ? (a pour absent, p pour présent)");
+                        response = Char.ToLower(Console.ReadKey().KeyChar);
+                        Console.WriteLine();  // New line for better user experience.
 
+                        if (response == 'a')
+                        {
+                            absentStudents.Add(Convert.ToInt32(students["user_id"]));
+                            Console.WriteLine($"Absent");
+                        }
+                        else if (response == 'p')
+                        {
+                            Console.WriteLine($"Présent");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Erreur. Taper 'a' ou 'p'");
+                        }
+                    } while (response != 'a' && response != 'p');
                 }
-                var studentInfo = new
-                {
-                    array
-                };
-                Absent.Model.AbsentModel.addAbsent(date, studentInfo);
+                Absent.Model.AbsentModel.addAbsent(date, absentStudents);
             }
         }
 
-         public static DateTime ChoiceDay()
+        public static DateOnly ChooseDay()
         {
             Console.Clear();
-            string s;
-            bool validDate;
+            DateOnly parsedDate;
+            string? inputDate;
+
             do
             {
-                Console.WriteLine($"Veuillez entrer une date pour l'appel (format JJ/MM/AAAA) :");
-                s = Console.ReadLine();
-                validDate = IsValidDate(s, out DateTime parsedDate);
-                if (validDate)
-                {
-                    return parsedDate;
-                }
-            } while (!validDate);
+                Console.WriteLine("Veuillez entrer une date pour l'appel (format JJ/MM/AAAA) :");
+                inputDate = Console.ReadLine();
 
-            // Ceci ne sera jamais atteint, mais c'est nécessaire pour satisfaire le compilateur.
-            return DateTime.MinValue;
+            } while (!IsValidDate(inputDate, out parsedDate));
+
+            return parsedDate;
         }
 
-        public static bool IsValidDate(string date, out DateTime parsedDate)
+        public static bool IsValidDate(string date, out DateOnly parsedDate)
         {
-            if (DateTime.TryParseExact(date, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out parsedDate))
+            if (DateOnly.TryParseExact(date, "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out parsedDate))
             {
                 return true;
             }
@@ -94,65 +81,48 @@ namespace Students.Controller
             }
         }
 
-
-
-
-        public static void InsertA(string firstname,string lastname,string statut)
+        public static void InsertAbsentee(string firstname, string lastname, string status)
         {
-            string insertQuery = $"INSERT INTO Absent (firstname,lastname,statut) VALUES ('{firstname}','{lastname}','{statut}')";
+            string insertQuery = "INSERT INTO Absent (firstname, lastname, statut) VALUES (@firstname, @lastname, @statut)";
             using var cmd = new SQLiteCommand(insertQuery, connection);
+            cmd.Parameters.AddWithValue("@firstname", firstname);
+            cmd.Parameters.AddWithValue("@lastname", lastname);
+            cmd.Parameters.AddWithValue("@statut", status);
             cmd.ExecuteNonQuery();
         }
 
-        public static void Get()
+        public static void GetUsers()
         {
-            string selectQuery = "SELECT * FROM User";
+            const string selectQuery = "SELECT * FROM User";
             using var cmd = new SQLiteCommand(selectQuery, connection);
             using SQLiteDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                Console.WriteLine($"ID: {reader["identifiant"]}, Name: {reader["password"]}");
+                Console.WriteLine($"ID: {reader["identifiant"]}, Password: {reader["password"]}");
             }
         }
-        public static void GetA()
+
+        public static void GetAbsentees()
         {
-            string selectQuery = "SELECT * FROM Absent";
+            const string selectQuery = "SELECT * FROM Absent";
             using var cmd = new SQLiteCommand(selectQuery, connection);
             using SQLiteDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                Console.WriteLine($"Firstname: {reader["firstname"]}, Lastname: {reader["lastname"]} , {reader["statut"]}");
+                Console.WriteLine($"Firstname: {reader["firstname"]}, Lastname: {reader["lastname"]}, Status: {reader["statut"]}");
             }
         }
-        public static string GetAbsentList()
+
+        public static bool AuthenticateUser(string username, string password)
         {
-            List<int> ids = new List<int>();
-            string selectQuery = "SELECT * FROM Absent";
+            const string selectQuery = "SELECT * FROM User WHERE identifiant = @identifiant AND password = @password";
+
             using var cmd = new SQLiteCommand(selectQuery, connection);
+            cmd.Parameters.AddWithValue("@identifiant", username);
+            cmd.Parameters.AddWithValue("@password", password);
+
             using SQLiteDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                ids.Add(Convert.ToInt32(reader["id"]));
-            }
-            return string.Join(",", ids);
-        }
-
-        public static bool GetUserByName(string identifiant,string password)
-        {
-
-        string selectQuery = "SELECT * FROM User WHERE identifiant = @identifiant and password = @password";
-
-        using var cmd = new SQLiteCommand(selectQuery, connection);
-                cmd.Parameters.AddWithValue("@identifiant", identifiant);
-                cmd.Parameters.AddWithValue("@password", password);
-
-        using SQLiteDataReader reader = cmd.ExecuteReader();
-        if (reader.Read())
-        {
-            return true;
-        }
-
-        return false;
+            return reader.Read();
         }
 
         public static void CloseConnection()
@@ -164,12 +134,11 @@ namespace Students.Controller
             }
         }
 
-        public static void Clear(){
-            string deleteQuery = "DELETE FROM Absent";
+        public static void ClearAbsentees()
+        {
+            const string deleteQuery = "DELETE FROM Absent";
             using var cmd = new SQLiteCommand(deleteQuery, connection);
             cmd.ExecuteNonQuery();
         }
     }
-
-
 }
