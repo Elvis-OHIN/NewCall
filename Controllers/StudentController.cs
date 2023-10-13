@@ -39,7 +39,12 @@ namespace Students.Controller
                         }
                     } while (response != 'a' && response != 'p' && response != 'A' && response != 'P');
                 }
-                Absent.Model.AbsentModel.addAbsent(date, absentStudents);
+                var absent = Absent.Model.AbsentModel.GetAbsentListByDate(date.Date);
+                if(!absent.HasRows){
+                    Absent.Model.AbsentModel.addAbsent(date, absentStudents);
+                }else{
+                    Absent.Model.AbsentModel.UpdateAbsent(date, absentStudents);
+                }
                 AnsiConsole.Clear();
             }
         }

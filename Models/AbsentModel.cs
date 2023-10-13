@@ -10,22 +10,12 @@ namespace Absent.Model
     public class AbsentModel {
 
         private static readonly string connectionString = Database.Config.Database.connectionString;
-        private static SQLiteConnection connection;
 
-        static AbsentModel()
+        public static SQLiteConnection CreateConnection()
         {
-            connection = new SQLiteConnection(connectionString);
+            var connection = new SQLiteConnection(connectionString);
             connection.Open();
-            AppDomain.CurrentDomain.ProcessExit += (s, e) => CloseConnection();
-        }
-
-        public static void CloseConnection()
-        {
-            if (connection != null && connection.State == System.Data.ConnectionState.Open)
-            {
-                connection.Close();
-                connection.Dispose();
-            }
+            return connection;
         }
         public static void GetAbsentByID(int student_id)
         {
@@ -43,24 +33,19 @@ namespace Absent.Model
                 }
             }
         }
-        public static string GetAbsentListByDate(DateOnly date)
+        public static SQLiteDataReader GetAbsentListByDate(DateTime date)
         {
-            List<int> ids = new List<int>();
-            string selectQuery = "SELECT * FROM Absent WHERE date = @date";
-            using var connection = Database.Config.Database.Connection;
+            string selectQuery = $"SELECT * FROM Absent WHERE date = '{date.Date}'";
+            using var connection = CreateConnection();
             using var cmd = new SQLiteCommand(selectQuery, connection);
             using SQLiteDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                ids.Add(Convert.ToInt32(reader["id"]));
-            }
-            return string.Join(",", ids);
+            return reader;
         }
 
 
         public static void FetchAbsentsByDate(DateTime date)
         {
-            SQLiteConnection connection = Database.Config.Database.Connection;
+            using var connection = CreateConnection();
             string selectQuery = $"SELECT * FROM Absent WHERE date = '{date.Date}'";
 
             using (var cmd = new SQLiteCommand(selectQuery, connection))
@@ -104,12 +89,22 @@ namespace Absent.Model
         public static void addAbsent(DateTime date , object studentData)
         {
             string jsonData = JsonConvert.SerializeObject(studentData);
+            using var connection = CreateConnection();
             string insertQuery = $"INSERT INTO Absent (date,list) VALUES ('{date.Date}','{jsonData}')";
+            using var cmd = new SQLiteCommand(insertQuery, connection);
+            cmd.ExecuteNonQuery();
+        }
+        public static void UpdateAbsent(DateTime date , object studentData)
+        {
+            using var connection = CreateConnection();
+            string jsonData = JsonConvert.SerializeObject(studentData);
+            string insertQuery = $"UPDATE Absent set list = '{jsonData}' WHERE date = '{date.Date}'";
             using var cmd = new SQLiteCommand(insertQuery, connection);
             cmd.ExecuteNonQuery();
         }
         public static string GetAbsentList()
         {
+            using var connection = CreateConnection();
             List<int> ids = new List<int>();
             string selectQuery = "SELECT * FROM Absent";
             using var cmd = new SQLiteCommand(selectQuery, connection);
@@ -124,7 +119,7 @@ namespace Absent.Model
         public static int GetAbsentTotal(int user_id)
         {
             int total = 0;
-            SQLiteConnection connection = Database.Config.Database.Connection;
+            using var connection = CreateConnection();
 
             string selectQuery = "SELECT * FROM Absent";
             using (var cmd = new SQLiteCommand(selectQuery, connection))
