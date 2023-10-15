@@ -1,9 +1,8 @@
 using Spectre.Console;
-using Students;
 
-namespace Menu.Controller
+namespace Controller
 {
-    public class Code
+    public class MenuController
     {
         public static bool MainMenu()
         {
@@ -23,13 +22,13 @@ namespace Menu.Controller
             switch (selection)
             {
                 case "Voir la liste des absents":
-                    Absent.Controller.AbsentController.DisplayAbsentList();
+                    AbsentController.DisplayAbsentList();
                     return true;
                 case "Faire l'appel":
-                    Students.Controller.Code.Call();
+                    StudentController.Call();
                     return true;
                 case "Stats":
-                    Absent.Controller.AbsentController.DisplayAbsentListStats();
+                    AbsentController.DisplayAbsentListStats();
                     return true;
                 case "Quittez":
                     return false;

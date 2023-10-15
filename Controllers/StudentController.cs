@@ -1,52 +1,53 @@
-using System;
-using System.Collections.Generic;
-using System.Data.SQLite;
+using Models;
 using Spectre.Console;
-using Calendars;
+using Repository;
 
-namespace Students.Controller
+namespace Controller
 {
-    public class Code
+    public class StudentController
     {
         public static void Call()
         {
             AnsiConsole.Clear();
             List<int> absentStudents = new List<int>();
-            DateTime date = Calendars.Controller.CalendarController.ChooseDay();
+            DateTime date = CalendarController.ChooseDay();
             AnsiConsole.Clear();
-            using (SQLiteDataReader students = Student.Model.StudentModel.GetAllStudent())
+            
+            List<Student> students = StudentRepository.GetAllStudent();
+            foreach (var student in students)
             {
-                while (students.Read())
+                char response;
+                do
                 {
-                    char response;
-                    do
+                    response = AnsiConsole.Ask<char>($"L'étudiant {student.Firstname} {student.Lastname} est-il absent ou présent ? (a pour absent, p pour présent)");
+                    switch (response)
                     {
-                        response = AnsiConsole.Ask<char>($"L'étudiant {students["firstname"]} {students["lastname"]} est-il absent ou présent ? (a pour absent, p pour présent)");
-                        switch (response)
-                        {
-                            case 'a':
-                            case 'A':
-                                absentStudents.Add(Convert.ToInt32(students["user_id"]));
-                                AnsiConsole.MarkupLine("[red]Absent[/]");
-                                break;
-                            case 'p':
-                            case 'P':
-                                AnsiConsole.MarkupLine("[green]Présent[/]");
-                                break;
-                            default:
-                                AnsiConsole.MarkupLine("[yellow]Erreur. Taper 'a' ou 'p'[/]");
-                                break;
-                        }
-                    } while (response != 'a' && response != 'p' && response != 'A' && response != 'P');
-                }
-                var absent = Absent.Model.AbsentModel.GetAbsentListByDate(date.Date);
-                if(!absent.HasRows){
-                    Absent.Model.AbsentModel.addAbsent(date, absentStudents);
-                }else{
-                    Absent.Model.AbsentModel.UpdateAbsent(date, absentStudents);
-                }
-                AnsiConsole.Clear();
+                        case 'a':
+                        case 'A':
+                            absentStudents.Add(student.Id);
+                            AnsiConsole.MarkupLine("[red]Absent[/]");
+                            break;
+                        case 'p':
+                        case 'P':
+                            AnsiConsole.MarkupLine("[green]Présent[/]");
+                            break;
+                        default:
+                            AnsiConsole.MarkupLine("[yellow]Erreur. Taper 'a' ou 'p'[/]");
+                            break;
+                    }
+                } while (response != 'a' && response != 'p' && response != 'A' && response != 'P');
             }
+
+            var absent = AbsentRepository.GetAbsentListByDate(date.Date);
+            if (!absent.HasRows)
+            {
+                AbsentRepository.addAbsent(date, absentStudents);
+            }
+            else
+            {
+                AbsentRepository.UpdateAbsent(date, absentStudents);
+            }
+            AnsiConsole.Clear();
         }
     }
 }

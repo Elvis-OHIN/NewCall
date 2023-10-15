@@ -1,16 +1,18 @@
 using System;
 using Spectre.Console;
+using Repository;
+using Models;
 
-namespace Absent.Controller
+namespace Controller
 {
     public class AbsentController
     {
         public static void DisplayAbsentList()
         {
-            DateTime date = Calendars.Controller.CalendarController.ChooseDay();
+            DateTime date = CalendarController.ChooseDay();
             AnsiConsole.Clear();
             AnsiConsole.MarkupLine("[yellow]Liste des absents[/]");
-            Model.AbsentModel.FetchAbsentsByDate(date);
+            AbsentRepository.FetchAbsentsByDate(date);
             AnsiConsole.MarkupLine("\r\n[green]Appuyez sur Entrée pour retourner au menu principal[/]");
             Console.ReadLine();
         }
@@ -27,11 +29,11 @@ namespace Absent.Controller
                 table.AddColumn("Prénom");
                 table.AddColumn("Total des absences");
 
-                System.Data.SQLite.SQLiteDataReader students = Student.Model.StudentModel.GetAllStudent();
-                while (students.Read())
+                List<Student> students = StudentRepository.GetAllStudent();
+                foreach (var student in students)
                 {
-                    int totalAbsences = Model.AbsentModel.GetAbsentTotal(Convert.ToInt32(students["user_id"]));
-                    table.AddRow((string)students["firstname"], (string)students["lastname"], totalAbsences.ToString());
+                    int totalAbsences = AbsentRepository.GetAbsentTotal(student.Id);
+                    table.AddRow(student.Firstname, student.Lastname, totalAbsences.ToString());
                 }
 
                 AnsiConsole.Write(table);
