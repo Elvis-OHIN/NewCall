@@ -25,6 +25,7 @@ namespace Controller
                         case 'a':
                         case 'A':
                             absentStudents.Add(student.Id);
+                            AbsencesRepository.AddAbsence(student.Id,date.Date,date.Date,"","");
                             AnsiConsole.MarkupLine("[red]Absent[/]");
                             break;
                         case 'p':

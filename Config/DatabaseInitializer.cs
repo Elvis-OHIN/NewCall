@@ -112,6 +112,27 @@ namespace Config
                     }
                 }
             }
+            if (!TableExists("Absences"))
+            {
+                using (var connection = Database.GetConnection())
+                {
+                    connection.Open();
+
+                    using (var cmd = new SQLiteCommand(@"
+                        CREATE TABLE Absences (
+                            [id] INTEGER PRIMARY KEY AUTOINCREMENT,   
+                            [student_id] INTEGER,                         
+                            [start_date] DATE NOT NULL,                   
+                            [end_date] DATE,                           
+                            [reason] TEXT,                                   
+                            [comments] TEXT,                               
+                            FOREIGN KEY (student_id) REFERENCES Students(user_id) 
+                        )", connection))
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
         }
         public static bool TableExists(string tableName)
         {
