@@ -1,6 +1,4 @@
 ﻿﻿using System;
-using Login;
-using Menu;
 using Spectre.Console;
 
 class Program
@@ -9,7 +7,7 @@ class Program
     {
         Console.Clear();
 
-        Database.Config.Database.EnsureTableExists();
+        Config.DatabaseInitializer.Initialize();
 
         // Affichez le titre de l'application en utilisant l'art ASCII
         AnsiConsole.Write(
@@ -22,7 +20,7 @@ class Program
         rule.Justification = Justify.Left;
         AnsiConsole.Write(rule);
         // Gérez la connexion de l'utilisateur
-        Login.Controller.LoginController.ValidationLogin();
+        Controller.LoginController.ValidationLogin();
 
         // Effacez l'écran pour une meilleure expérience utilisateur
         Console.Clear();
@@ -31,7 +29,7 @@ class Program
         bool showMenu = true;
         while (showMenu)
         {
-            showMenu = Menu.Controller.Code.MainMenu();
+            showMenu = Controller.MenuController.MainMenu();
         }
     }
 }

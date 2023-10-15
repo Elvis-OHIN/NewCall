@@ -1,7 +1,7 @@
 using Spectre.Console;
-using Students.Controller;
+using Repository;
 
-namespace Login.Controller
+namespace Controller
 {
     public class LoginController
     {
@@ -17,7 +17,7 @@ namespace Login.Controller
                     new TextPrompt<string>("Entrer votre [green]Mot de passe[/]?")
                         .Secret());
 
-                if (Admin.Model.AdminModel.GetAdmin(identifiant, password))
+                if (AdminRepository.GetAdmin(identifiant, password))
                 {
                     isAuthenticated = true;
                     AnsiConsole.MarkupLine("[green]Vous êtes connecté[/]");

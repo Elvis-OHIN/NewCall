@@ -1,7 +1,6 @@
 using Spectre.Console;
-using Students.Controller;
 
-namespace Calendars.Controller
+namespace Controller
 {
     public class CalendarController
     {
