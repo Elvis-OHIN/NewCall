@@ -123,7 +123,7 @@ namespace Repository
             {
                 connection.Open();
                     
-                using (var cmd = new SQLiteCommand($"SELECT * FROM Absent"))
+                using (var cmd = new SQLiteCommand($"SELECT * FROM Absent", connection))
                 {
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
