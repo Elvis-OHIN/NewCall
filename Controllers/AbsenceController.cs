@@ -7,17 +7,17 @@ namespace Controller
 {
     public class AbsenceController
     {
-        public static void DisplayAbsentList()
+        public static void DisplayAbsenceListList()
         {
             DateTime date = CalendarController.ChooseDay();
             AnsiConsole.Clear();
-            AnsiConsole.MarkupLine("[yellow]Liste des absents[/]");
-            AbsentRepository.FetchAbsentsByDate(date);
+            AnsiConsole.MarkupLine("[yellow]Liste des Absents[/]");
+            AbsenceListRepository.FetchAbsenceListsByDate(date);
             AnsiConsole.MarkupLine("\r\n[green]Appuyez sur Entrée pour retourner au menu principal[/]");
             Console.ReadLine();
         }
 
-        public static void DisplayAbsentListStats()
+        public static void DisplayAbsenceListListStats()
         {
             try
             {
@@ -32,7 +32,7 @@ namespace Controller
                 List<Student> students = StudentRepository.GetAllStudent();
                 foreach (var student in students)
                 {
-                    int totalAbsences = AbsentRepository.GetAbsentTotal(student.Id);
+                    int totalAbsences = AbsenceListRepository.GetAbsenceListTotal(student.Id);
                     table.AddRow(student.Firstname, student.Lastname, totalAbsences.ToString());
                 }
 
@@ -58,16 +58,16 @@ namespace Controller
                 table.AddColumn("Moyenne d'absences par individu");
                 table.AddColumn("Médiane d'absences");
                 table.AddColumn("Mode d'absences");
-                
+
                 int TotalAbsencesCount = AbsencesRepository.GetTotalAbsencesCount();
                 double AverageAbsencesPerPerson =  AbsencesRepository.GetAverageAbsencesPerPerson();
                 double MedianAbsences =  AbsencesRepository.GetMedianAbsences();
                 int ModeAbsences =   AbsencesRepository.GetModeAbsences();
                 table.AddRow(
-                    TotalAbsencesCount.ToString(), 
-                    AverageAbsencesPerPerson.ToString(), 
+                    TotalAbsencesCount.ToString(),
+                    AverageAbsencesPerPerson.ToString(),
                     MedianAbsences.ToString(),
-                    ModeAbsences.ToString() 
+                    ModeAbsences.ToString()
                 );
                 AnsiConsole.Write(table);
                 AnsiConsole.MarkupLine("\r\n[green]Appuyez sur Entrée pour retourner au menu principal[/]");

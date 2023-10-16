@@ -13,7 +13,7 @@ namespace Controller
                     .PageSize(15)
                     .AddChoices(new[]
                     {
-                        "Voir la liste des absents",
+                        "Voir la liste des AbsenceLists",
                         "Faire l'appel",
                         "Stats",
                         "Quittez"
@@ -21,8 +21,8 @@ namespace Controller
 
             switch (selection)
             {
-                case "Voir la liste des absents":
-                    AbsenceController.DisplayAbsentList();
+                case "Voir la liste des AbsenceLists":
+                    AbsenceController.DisplayAbsenceListList();
                     return true;
                 case "Faire l'appel":
                     StudentController.Call();
@@ -60,7 +60,7 @@ namespace Controller
                     AbsenceController.DisplayAbsencesGlobalStats();
                     return true;
                 case "Stat par étudiant":
-                    AbsenceController.DisplayAbsentListStats();
+                    AbsenceController.DisplayAbsenceListListStats();
                     return true;
                 case "Quittez":
                     return false;

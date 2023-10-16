@@ -3,17 +3,18 @@ using Config;
 using Newtonsoft.Json;
 using Spectre.Console;
 using Models;
+using System.Globalization;
 
 
 namespace Repository
 {
-    public class AbsentRepository {
-        public static void GetAbsentByID(int student_id)
+    public class AbsenceListRepository {
+        public static void GetAbsenceListByID(int student_id)
         {
             using (var connection = Database.GetConnection())
             {
                 connection.Open();
-                    
+
                 using (var cmd = new SQLiteCommand("SELECT * FROM Student WHERE student_id = @student_id)", connection))
                 {
                     cmd.Parameters.AddWithValue("@identifiant", student_id);
@@ -29,13 +30,13 @@ namespace Repository
                 }
             }
         }
-        public static SQLiteDataReader GetAbsentListByDate(DateTime date)
+        public static SQLiteDataReader GetAbsenceListListByDate(DateTime date)
         {
             using (var connection = Database.GetConnection())
             {
                 connection.Open();
-                    
-                using (var cmd = new SQLiteCommand($"SELECT * FROM Absent WHERE date = '{date.Date}'", connection))
+
+                using (var cmd = new SQLiteCommand($"SELECT * FROM AbsenceList WHERE date = '{date.Date}'", connection))
                 {
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
@@ -46,13 +47,16 @@ namespace Repository
         }
 
 
-        public static void FetchAbsentsByDate(DateTime date)
+        public static void FetchAbsenceListsByDate(DateTime date)
         {
             using (var connection = Database.GetConnection())
             {
                 connection.Open();
-                    
-                using (var cmd = new SQLiteCommand($"SELECT * FROM Absent WHERE date = '{date.Date}'", connection))
+
+                DateTime parsedDate = DateTime.ParseExact(date.Date.ToString(), "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                string formattedDate = parsedDate.ToString("yyyy-MM-dd");
+
+                using (var cmd = new SQLiteCommand($"SELECT * FROM AbsenceList WHERE date = '{formattedDate}'", connection))
                 {
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
@@ -87,43 +91,68 @@ namespace Repository
                 }
             }
         }
-        public static void addAbsent(DateTime date , object studentData)
+
+        public static List<DateTime> GetDateAbsenceList()
+        {
+            List<DateTime> dateList =  new List<DateTime>();
+            using (var connection = Database.GetConnection())
+            {
+                connection.Open();
+
+                using (var cmd = new SQLiteCommand($"SELECT * FROM AbsenceList", connection))
+                {
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            dateList.Add((DateTime)reader["date"]);
+                        }
+                    }
+                }
+            }
+            return dateList;
+        }
+        public static void addAbsenceList(DateTime date , object studentData)
         {
             string jsonData = JsonConvert.SerializeObject(studentData);
 
             using (var connection = Database.GetConnection())
             {
                 connection.Open();
-                    
-                using (var cmd = new SQLiteCommand($"INSERT INTO Absent (date,list) VALUES ('{date.Date}','{jsonData}')", connection))
+
+                DateTime parsedDate = DateTime.ParseExact(date.Date.ToString(), "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                string formattedDate = parsedDate.ToString("yyyy-MM-dd");
+
+                using (var cmd = new SQLiteCommand($"INSERT INTO AbsenceList (date,list) VALUES ('{formattedDate}','{jsonData}')", connection))
                 {
                     cmd.ExecuteNonQuery();
                 }
             }
         }
-        public static void UpdateAbsent(DateTime date , object studentData)
+        public static void UpdateAbsenceList(DateTime date , object studentData)
         {
             string jsonData = JsonConvert.SerializeObject(studentData);
 
             using (var connection = Database.GetConnection())
             {
                 connection.Open();
-                    
-                using (var cmd = new SQLiteCommand($"UPDATE Absent set list = '{jsonData}' WHERE date = '{date.Date}'", connection))
+
+                using (var cmd = new SQLiteCommand($"UPDATE AbsenceList set list = '{jsonData}' WHERE date = '{date.Date}'", connection))
                 {
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        public static int GetAbsentTotal(int user_id)
+
+        public static int GetAbsenceListTotal(int user_id)
         {
             int total = 0;
             using (var connection = Database.GetConnection())
             {
                 connection.Open();
-                    
-                using (var cmd = new SQLiteCommand($"SELECT * FROM Absent", connection))
+
+                using (var cmd = new SQLiteCommand($"SELECT * FROM AbsenceList", connection))
                 {
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
