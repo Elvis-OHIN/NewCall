@@ -8,7 +8,7 @@ namespace Config
         {
             if (!TableExists("Students"))
             {
-                
+
                 using (var connection = Database.GetConnection())
                 {
                     connection.Open();
@@ -27,7 +27,7 @@ namespace Config
                 using (var connection = Database.GetConnection())
                 {
                     connection.Open();
-                    
+
                     using (var cmd = new SQLiteCommand(@"INSERT INTO Students (firstname, lastname , statut) VALUES (@Firstname, @Lastname , @Statut)", connection))
                     {
                         cmd.Parameters.Clear();
@@ -63,14 +63,14 @@ namespace Config
                 }
             }
 
-            if (!TableExists("Absent"))
+            if (!TableExists("AbsenceList"))
             {
                 using (var connection = Database.GetConnection())
                 {
                     connection.Open();
 
                     using (var cmd = new SQLiteCommand(@"
-                        CREATE TABLE Absent(
+                        CREATE TABLE AbsenceList(
                             [id] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                             [date] DATE NOT NULL,
                             [list] DataJSON NULL
@@ -120,13 +120,13 @@ namespace Config
 
                     using (var cmd = new SQLiteCommand(@"
                         CREATE TABLE Absences (
-                            [id] INTEGER PRIMARY KEY AUTOINCREMENT,   
-                            [student_id] INTEGER,                         
-                            [start_date] DATE NOT NULL,                   
-                            [end_date] DATE,                           
-                            [reason] TEXT,                                   
-                            [comments] TEXT,                               
-                            FOREIGN KEY (student_id) REFERENCES Students(user_id) 
+                            [id] INTEGER PRIMARY KEY AUTOINCREMENT,
+                            [student_id] INTEGER,
+                            [start_date] DATE NOT NULL,
+                            [end_date] DATE,
+                            [reason] TEXT,
+                            [comments] TEXT,
+                            FOREIGN KEY (student_id) REFERENCES Students(user_id)
                         )", connection))
                     {
                         cmd.ExecuteNonQuery();

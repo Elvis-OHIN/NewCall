@@ -9,10 +9,10 @@ namespace Controller
         public static void Call()
         {
             AnsiConsole.Clear();
-            List<int> absentStudents = new List<int>();
+            List<int> AbsenceListStudents = new List<int>();
             DateTime date = CalendarController.ChooseDay();
             AnsiConsole.Clear();
-            
+
             List<Student> students = StudentRepository.GetAllStudent();
             foreach (var student in students)
             {
@@ -24,7 +24,7 @@ namespace Controller
                     {
                         case 'a':
                         case 'A':
-                            absentStudents.Add(student.Id);
+                            AbsenceListStudents.Add(student.Id);
                             AbsencesRepository.AddAbsence(student.Id,date.Date,date.Date,"","");
                             AnsiConsole.MarkupLine("[red]Absent[/]");
                             break;
@@ -39,14 +39,14 @@ namespace Controller
                 } while (response != 'a' && response != 'p' && response != 'A' && response != 'P');
             }
 
-            var absent = AbsentRepository.GetAbsentListByDate(date.Date);
-            if (!absent.HasRows)
+            var AbsenceList = AbsenceListRepository.GetAbsenceListListByDate(date.Date);
+            if (!AbsenceList.HasRows)
             {
-                AbsentRepository.addAbsent(date, absentStudents);
+                AbsenceListRepository.addAbsenceList(date, AbsenceListStudents);
             }
             else
             {
-                AbsentRepository.UpdateAbsent(date, absentStudents);
+                AbsenceListRepository.UpdateAbsenceList(date, AbsenceListStudents);
             }
             AnsiConsole.Clear();
         }

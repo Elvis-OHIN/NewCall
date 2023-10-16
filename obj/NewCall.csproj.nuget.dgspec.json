@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Elvis\\Documents\\3il_MS2D\\DOT.NET\\NewCall\\NewCall.csproj": {}
+    "D:\\niho\\NewCall\\NewCall.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Elvis\\Documents\\3il_MS2D\\DOT.NET\\NewCall\\NewCall.csproj": {
+    "D:\\niho\\NewCall\\NewCall.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Elvis\\Documents\\3il_MS2D\\DOT.NET\\NewCall\\NewCall.csproj",
+        "projectUniqueName": "D:\\niho\\NewCall\\NewCall.csproj",
         "projectName": "NewCall",
-        "projectPath": "C:\\Users\\Elvis\\Documents\\3il_MS2D\\DOT.NET\\NewCall\\NewCall.csproj",
-        "packagesPath": "C:\\Users\\Elvis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Elvis\\Documents\\3il_MS2D\\DOT.NET\\NewCall\\obj\\",
+        "projectPath": "D:\\niho\\NewCall\\NewCall.csproj",
+        "packagesPath": "C:\\Users\\elvis\\.nuget\\packages\\",
+        "outputPath": "D:\\niho\\NewCall\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Elvis\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\elvis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
