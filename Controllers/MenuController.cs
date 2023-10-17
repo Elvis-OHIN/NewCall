@@ -4,65 +4,68 @@ namespace Controller
 {
     public class MenuController
     {
+        // Affiche le menu principal à l'utilisateur et gère la sélection.
         public static bool MainMenu()
         {
             Console.Clear();
             var selection = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
-                    .Title("Choisissez une option:")
+                    .Title("Menu principal : Sélectionnez une option")
                     .PageSize(15)
                     .AddChoices(new[]
                     {
-                        "Voir la liste des AbsenceLists",
-                        "Faire l'appel",
-                        "Stats",
-                        "Quittez"
+                        "Visualiser la liste des absences",
+                        "Effectuer l'appel",
+                        "Statistiques",
+                        "Quitter"
                     }));
 
             switch (selection)
             {
-                case "Voir la liste des AbsenceLists":
+                case "Visualiser la liste des absences":
                     AbsenceController.DisplayAbsenceListList();
                     return true;
-                case "Faire l'appel":
+                case "Effectuer l'appel":
                     StudentController.Call();
                     return true;
-                case "Stats":
+                case "Statistiques":
                     bool showMenu = true;
                     while (showMenu)
                     {
                         showMenu = StatsMenu();
                     }
                     return true;
-                case "Quittez":
+                case "Quitter":
                     return false;
                 default:
                     return true;
             }
         }
+
+        // Affiche le menu des statistiques à l'utilisateur et gère la sélection.
         public static bool StatsMenu()
         {
             Console.Clear();
             var selection = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
-                    .Title("Choisissez une option:")
+                    .Title("Menu des statistiques : Sélectionnez une option")
                     .PageSize(15)
                     .AddChoices(new[]
                     {
-                        "Stat global",
-                        "Stat par étudiant",
-                        "Quittez"
+                        "Statistiques globales",
+                        "Statistiques par étudiant",
+                        "Retour au menu principal"
                     }));
 
             switch (selection)
             {
-                case "Stat global":
+                case "Statistiques globales":
                     AbsenceController.DisplayAbsencesGlobalStats();
                     return true;
-                case "Stat par étudiant":
+                case "Statistiques par étudiant":
                     AbsenceController.DisplayAbsenceListListStats();
                     return true;
-                case "Quittez":
+                case "Retour au menu principal":
                     return false;
                 default:
                     return true;

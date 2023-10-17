@@ -9100,26 +9100,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\elvis\\.nuget\\packages\\": {}
+    "C:\\Users\\Elvis\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\niho\\NewCall\\NewCall.csproj",
+      "projectUniqueName": "C:\\Users\\Elvis\\Documents\\3il_MS2D\\DOT.NET\\NewCall\\NewCall.csproj",
       "projectName": "NewCall",
-      "projectPath": "D:\\niho\\NewCall\\NewCall.csproj",
-      "packagesPath": "C:\\Users\\elvis\\.nuget\\packages\\",
-      "outputPath": "D:\\niho\\NewCall\\obj\\",
+      "projectPath": "C:\\Users\\Elvis\\Documents\\3il_MS2D\\DOT.NET\\NewCall\\NewCall.csproj",
+      "packagesPath": "C:\\Users\\Elvis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Elvis\\Documents\\3il_MS2D\\DOT.NET\\NewCall\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\elvis\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Elvis\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

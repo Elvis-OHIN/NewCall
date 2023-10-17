@@ -36,7 +36,7 @@ namespace Repository
             {
                 connection.Open();
 
-                using (var cmd = new SQLiteCommand($"SELECT * FROM AbsenceList WHERE date = '{date.Date}'", connection))
+                using (var cmd = new SQLiteCommand($"SELECT * FROM AbsenceList WHERE date = '{date.ToString("yyyy-MM-dd")}'", connection))
                 {
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
@@ -137,7 +137,7 @@ namespace Repository
             {
                 connection.Open();
 
-                using (var cmd = new SQLiteCommand($"UPDATE AbsenceList set list = '{jsonData}' WHERE date = '{date.Date}'", connection))
+                using (var cmd = new SQLiteCommand($"UPDATE AbsenceList set list = '{jsonData}' WHERE date = '{date.ToString("yyyy-MM-dd")}'", connection))
                 {
                     cmd.ExecuteNonQuery();
                 }

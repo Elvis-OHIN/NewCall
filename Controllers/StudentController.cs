@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Models;
 using Spectre.Console;
 using Repository;
@@ -14,29 +16,36 @@ namespace Controller
             AnsiConsole.Clear();
 
             List<Student> students = StudentRepository.GetAllStudent();
+
             foreach (var student in students)
             {
                 char response;
                 do
                 {
-                    response = AnsiConsole.Ask<char>($"L'étudiant {student.Firstname} {student.Lastname} est-il absent ou présent ? (a pour absent, p pour présent)");
+                    response = AnsiConsole.Ask<char>($"L'étudiant {student.Firstname} {student.Lastname} en {student.Statut} est-il [yellow]absent[/] (a) ou [yellow]présent[/] (p) ?");
+                    response = char.ToLower(response);
+
                     switch (response)
                     {
                         case 'a':
-                        case 'A':
                             AbsenceListStudents.Add(student.Id);
-                            AbsencesRepository.AddAbsence(student.Id,date.Date,date.Date,"","");
+                            AbsencesRepository.AddAbsence(student.Id, date.Date, date.Date, "", "");
                             AnsiConsole.MarkupLine("[red]Absent[/]");
                             break;
                         case 'p':
-                        case 'P':
                             AnsiConsole.MarkupLine("[green]Présent[/]");
+                            
+                            string studentStatus = student.Statut;
+                            if (studentStatus == "FA")
+                            {
+                                AnsiConsole.MarkupLine("[yellow]L'étudiant doit signer la feuille d'émargement.[/]");
+                            }
                             break;
                         default:
-                            AnsiConsole.MarkupLine("[yellow]Erreur. Taper 'a' ou 'p'[/]");
+                            AnsiConsole.MarkupLine("[yellow]Erreur. Veuillez taper 'a' pour absent ou 'p' pour présent.[/]");
                             break;
                     }
-                } while (response != 'a' && response != 'p' && response != 'A' && response != 'P');
+                } while (response != 'a' && response != 'p');
             }
 
             var AbsenceList = AbsenceListRepository.GetAbsenceListListByDate(date.Date);
@@ -48,6 +57,8 @@ namespace Controller
             {
                 AbsenceListRepository.UpdateAbsenceList(date, AbsenceListStudents);
             }
+            AnsiConsole.MarkupLine("\r\n[green]Appuyez sur Entrée pour retourner au menu principal[/]");
+            Console.ReadLine();
             AnsiConsole.Clear();
         }
     }
