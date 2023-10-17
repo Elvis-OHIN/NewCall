@@ -12,3 +12,328 @@ D:\niho\NewCall\obj\Debug\net7.0\refint\NewCall.dll
 D:\niho\NewCall\obj\Debug\net7.0\NewCall.pdb
 D:\niho\NewCall\obj\Debug\net7.0\NewCall.genruntimeconfig.cache
 D:\niho\NewCall\obj\Debug\net7.0\ref\NewCall.dll
+D:\niho\NewCall\obj\Debug\net7.0\NewCall.csproj.AssemblyReference.cache
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Antiforgery.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Core.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.Policy.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Cors.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.DataProtection.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Hosting.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Html.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Http.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Extensions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Features.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Localization.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Core.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Cors.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Localization.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.RazorPages.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Runtime.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Routing.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Routing.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.WebUtilities.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Caching.Memory.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Composite.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Localization.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Localization.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Logging.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.ObjectPool.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Extensions.WebEncoders.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Net.Http.Headers.dll
+D:\niho\NewCall\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\niho\NewCall\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+D:\niho\NewCall\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+D:\niho\NewCall\bin\Debug\net7.0\System.Security.Cryptography.Xml.dll
+D:\niho\NewCall\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\niho\NewCall\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
+D:\niho\NewCall\obj\Debug\net7.0\NewCall.csproj.CopyComplete
+D:\niho\NewCall\bin\Debug\net7.0\EntityFramework.SqlServer.dll
+D:\niho\NewCall\bin\Debug\net7.0\EntityFramework.dll
+D:\niho\NewCall\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\niho\NewCall\bin\Debug\net7.0\System.Data.SQLite.dll
+D:\niho\NewCall\bin\Debug\net7.0\System.CodeDom.dll
+D:\niho\NewCall\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\niho\NewCall\bin\Debug\net7.0\System.Data.SqlClient.dll
+D:\niho\NewCall\bin\Debug\net7.0\System.Data.SQLite.EF6.dll
+D:\niho\NewCall\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\niho\NewCall\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\niho\NewCall\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\niho\NewCall\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\niho\NewCall\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+D:\niho\NewCall\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+D:\niho\NewCall\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+D:\niho\NewCall\bin\Debug\net7.0\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\niho\NewCall\bin\Debug\net7.0\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\niho\NewCall\bin\Debug\net7.0\runtimes\win-x64\native\SQLite.Interop.dll
+D:\niho\NewCall\bin\Debug\net7.0\runtimes\win-x86\native\SQLite.Interop.dll
+D:\niho\NewCall\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\niho\NewCall\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\niho\NewCall\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\niho\NewCall\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\niho\NewCall\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\niho\NewCall\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\niho\NewCall\bin\Debug\net7.0\Spectre.Console.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\NewCall.exe
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\NewCall.deps.json
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\NewCall.runtimeconfig.json
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\NewCall.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\NewCall.pdb
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\EntityFramework.SqlServer.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\EntityFramework.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Antiforgery.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Cors.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.DataProtection.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Http.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Localization.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Cors.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Localization.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.RazorPages.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Runtime.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Routing.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Composite.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Localization.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Logging.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.WebEncoders.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Net.Http.Headers.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\Spectre.Console.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\System.Data.SQLite.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\System.Data.SqlClient.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\System.Data.SQLite.EF6.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\System.Security.Cryptography.Xml.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\obj\Debug\net7.0\NewCall.csproj.AssemblyReference.cache
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\obj\Debug\net7.0\NewCall.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\obj\Debug\net7.0\NewCall.AssemblyInfoInputs.cache
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\obj\Debug\net7.0\NewCall.AssemblyInfo.cs
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\obj\Debug\net7.0\NewCall.csproj.CoreCompileInputs.cache
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\obj\Debug\net7.0\NewCall.csproj.CopyComplete
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\obj\Debug\net7.0\NewCall.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\obj\Debug\net7.0\refint\NewCall.dll
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\obj\Debug\net7.0\NewCall.pdb
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\obj\Debug\net7.0\NewCall.genruntimeconfig.cache
+C:\Users\Elvis\Documents\3il MS2D\DOT .NET\NewCall\obj\Debug\net7.0\ref\NewCall.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\NewCall.exe
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\NewCall.deps.json
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\NewCall.runtimeconfig.json
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\NewCall.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\NewCall.pdb
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\EntityFramework.SqlServer.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\EntityFramework.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Antiforgery.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Cors.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.DataProtection.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Http.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Localization.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Cors.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Localization.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.RazorPages.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Runtime.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Routing.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Composite.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Localization.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Logging.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Extensions.WebEncoders.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Net.Http.Headers.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\Spectre.Console.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\System.Data.SQLite.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\System.Data.SqlClient.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\System.Data.SQLite.EF6.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\System.Security.Cryptography.Xml.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\obj\Debug\net7.0\NewCall.csproj.AssemblyReference.cache
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\obj\Debug\net7.0\NewCall.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\obj\Debug\net7.0\NewCall.AssemblyInfoInputs.cache
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\obj\Debug\net7.0\NewCall.AssemblyInfo.cs
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\obj\Debug\net7.0\NewCall.csproj.CoreCompileInputs.cache
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\obj\Debug\net7.0\NewCall.csproj.CopyComplete
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\obj\Debug\net7.0\NewCall.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\obj\Debug\net7.0\refint\NewCall.dll
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\obj\Debug\net7.0\NewCall.pdb
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\obj\Debug\net7.0\NewCall.genruntimeconfig.cache
+C:\Users\Elvis\Documents\3il_MS2D\DOT.NET\NewCall\obj\Debug\net7.0\ref\NewCall.dll
