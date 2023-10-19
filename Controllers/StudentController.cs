@@ -34,7 +34,7 @@ namespace Controller
                             break;
                         case 'p':
                             AnsiConsole.MarkupLine("[green]Présent[/]");
-                            
+
                             string studentStatus = student.Statut;
                             if (studentStatus == "FA")
                             {
@@ -55,7 +55,21 @@ namespace Controller
             }
             else
             {
+
+                foreach (string item in AbsencesRepository.DeleteAbsenceByDay(date))
+                {
+                    if (int.TryParse(item.Trim(), out int id))
+                        {
+                            AbsencesRepository.DeleteAbsence(id,date,date);
+                        }
+                }
+                foreach (int id in AbsenceListStudents)
+                {
+                    AbsencesRepository.AddAbsence(id, date.Date, date.Date, "", "");
+                }
                 AbsenceListRepository.UpdateAbsenceList(date, AbsenceListStudents);
+
+
             }
             AnsiConsole.MarkupLine("\r\n[green]Appuyez sur Entrée pour retourner au menu principal[/]");
             Console.ReadLine();
